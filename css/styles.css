@@ -38,17 +38,16 @@ body {
 
 .section {
   padding-top: 96px;
-  padding-bottom: 96px;
 }
 @media screen and (min-width: 768px) {
   .section {
+    padding-top: 96px;
   }
 }
 
 @media screen and (min-width: 1158px) {
   .section {
     padding-top: 120px;
-    padding-bottom: 120px;
   }
 }
 
@@ -119,6 +118,11 @@ img {
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
+@media only screen and (min-width: 768px) {
+  .header{
+    padding: 0;
+  }
+}
 
 .div-box {
   display: flex;
@@ -129,6 +133,14 @@ img {
   height: 72px;
 }
 
+@media only screen and (min-width: 768px) {
+  .div-box {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+   
+  }
+}
 
 .header-nav {
   display: flex;
@@ -147,7 +159,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .header-nav{
-    color: var(--SLATE, #434455);
+    color:  #434455;
 
 
 font-family: Roboto;
@@ -156,6 +168,9 @@ font-style: normal;
 font-weight: 400;
 line-height: 14px; /* 116.667% */
 letter-spacing: 0.48px;
+display: flex;
+align-items: center;
+margin-right: auto;
   }
 }
 
@@ -304,6 +319,7 @@ margin-left: auto;
 @media screen and (min-width: 768px){
 .header-address {
     margin-left: auto;
+    display: flex;
 }
 }
 
@@ -374,11 +390,16 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
+
+.hero-container{
+  
+}
+
 .dark-bg {
   background-color: #2e2f42;
-  padding: 188px 0;
-  margin: 0 auto;
-  flex-shrink: 0;
+  
+
+ padding: 72px 0;
   text-align: center;
   max-width: 1440px;
   background-size: cover;
@@ -388,9 +409,61 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/ofice.jpg);
+    url(/images/oficemobile@1x.jpg);
 }
 
+@media only screen and (min-width: 768px) {
+  .dark-bg{
+    background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/officetab@1x.png);
+    padding: 112px 0;
+}
+
+  }
+
+  @media only screen and (min-width: 1158px) {
+    .dark-bg{
+      padding: 188px 0;
+      background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/officedesc@1x.jpg);
+    }
+  }
+
+  @media only screen and (max-width: 767.99px) and (min-resolution: 192dpi) {
+    .dark-bg{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(/images/oficemobile@2x.jpg);
+    }
+  }
+
+  @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .dark-bg{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(/images/officetab@2x.png);
+    }
+  }
+
+  @media only screen and (min-width: 1158px) and (min-resolution: 192dpi) {
+    .dark-bg{
+      background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(/images/officedesc@2x.jpg);
+    }
+  }
 
 
 .hero-title {
@@ -423,8 +496,6 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 4px;
   min-width: 169px;
   padding: 16px 32px;
-  align-items: flex-start;
-  gap: 10px;
   text-align: center;
   margin: auto;
   display: block;
@@ -443,12 +514,18 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 /* Text */
 
-.text-container {
+/* .text-container {
   padding: 120px 0;
-}
+} */
 
 .text-div {
   background: #fff;
+}
+
+@media only screen and (min-width: 1158px) {
+  text-div{
+    
+  }
 }
 
 .title-list {
@@ -491,38 +568,69 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-.text-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f4f4fd;
 
-  height: 112px;
-  margin-bottom: 22px;
-  margin-bottom: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 4px;
+  
+
+@media only screen and (max-width: 320px) {
+   .text-wrapper{
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+   .text-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+  }
 }
 
 .main-caption {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.111;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin-bottom: 8px;
   text-align: left;
 }
 
+@media only screen and (min-width: 1158px) {
+  .main-caption{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+}
+
 .feature-text {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
   text-align: left;
   font-size: 16px;
+  font-size: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   flex-direction: column;
-  width: 264px;
-  height: 72px;
+  
+}
+
+@media only screen and (min-width: 1158px) {
+  .feature-text{
+    font-style: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
 }
 
 /* Heading */
