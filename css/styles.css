@@ -130,7 +130,7 @@ img {
   justify-content: space-between;
   gap: 40px;
   width: 1158px;
-  height: 72px;
+  height: 56px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -397,19 +397,17 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 .dark-bg {
   background-color: #2e2f42;
-  
-
- padding: 72px 0;
-  text-align: center;
   max-width: 1440px;
   background-size: cover;
+  margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
+  background-repeat: no-repeat;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/oficemobile@1x.jpg);
+    url(../images/oficemobile@1x.jpg);
 }
 
 @media only screen and (min-width: 768px) {
@@ -418,7 +416,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/officetab@1x.png);
+    url(../images/officetab@1x.png);
     padding: 112px 0;
 }
 
@@ -431,7 +429,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/officedesc@1x.jpg);
+    url(../images/officedesc@1x.jpg);
     }
   }
 
@@ -441,7 +439,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/oficemobile@2x.jpg);
+      url(../images/oficemobile@2x.jpg);
     }
   }
 
@@ -451,7 +449,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/officetab@2x.png);
+      url(../images/officetab@2x.png);
     }
   }
 
@@ -461,7 +459,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(/images/officedesc@2x.jpg);
+      url(../images/officedesc@2x.jpg);
     }
   }
 
@@ -1377,7 +1375,7 @@ height: 584px;
 }
 }
 
-.mobile-menu .menu-btn {
+.mobile-menu {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -1388,6 +1386,16 @@ height: 584px;
   justify-content: center;
   width: 24px;
   height: 24px;
+}
+
+.menu-btn {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .mobile-menu-list {
