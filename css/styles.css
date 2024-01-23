@@ -763,8 +763,6 @@ social-icon {
 }
 
 .portfolio-li {
-  position: relative;
-  overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -772,13 +770,13 @@ social-icon {
 
 @media only screen and (min-width: 768px) {
   .portfolio-li {
-    width: calc((100% - 24px * 1) / 2);
+    width: calc((100% - 24px * 2) / 3);
   }
 }
 
 @media only screen and (min-width: 1158px) {
   .portfolio-li {
-    width: calc((100% - 24px * 2) / 3);
+    width: calc((100% - 24px * 4) / 3);
   }
 }
 
@@ -788,8 +786,6 @@ social-icon {
 
 .portfolio-wrapper {
   position: relative;
-  width: 360px;
-  height: 360px;
   overflow: hidden;
 }
 
