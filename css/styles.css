@@ -379,17 +379,27 @@ margin-left: auto;
 
 .dark-bg {
   background-color: #2e2f42;
+  padding: 72px 0;
   max-width: 1440px;
   background-size: cover;
   margin: 0 auto;
   background-repeat: no-repeat;
   background-position: center;
-  background-repeat: no-repeat;
+  
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/oficemobile@1x.jpg);
+}
+
+
+@media only screen and (max-width: 767.99px) and (min-resolution: 192dpi){
+.dark-bg {
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)), 
+    url(../images/oficemobile@2x.jpg);
+}
 }
 
 @media only screen and (min-width: 768px) {
@@ -404,6 +414,8 @@ margin-left: auto;
 
   }
 
+
+
   @media only screen and (min-width: 1158px) {
     .dark-bg{
       padding: 188px 0;
@@ -415,15 +427,7 @@ margin-left: auto;
     }
   }
 
-  @media only screen and (max-width: 767.99px) and (min-resolution: 192dpi) {
-    .dark-bg{
-      background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/oficemobile@2x.jpg);
-    }
-  }
+  
 
   @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
     .dark-bg{
@@ -449,18 +453,29 @@ margin-left: auto;
 .hero-title {
   
   color: #fff;
-  text-align: center;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  margin-bottom: 48px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    max-width: 496px;
+    margin: 0 auto;
+    margin-bottom: 72px;
+    text-transform: capitalize;
 }
 
 @media only screen and (min-width: 768px) {
   .hero-title{
-    width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    text-transform: none;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-title{
+    margin-bottom: 48px;
   }
 }
 
@@ -578,13 +593,15 @@ margin-left: auto;
 
 .main-caption {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.111;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  margin-bottom: 8px;
-  text-align: left;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    margin-bottom: 8px;
+    text-align: center;
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .main-caption{
